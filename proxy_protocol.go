@@ -18,6 +18,11 @@ type protoConn struct {
 	proxy      *proxyproto.Header
 }
 
+// New create a wrapped listener
+func New(l net.Listener) net.Listener {
+	return &protoListener{l}
+}
+
 func (l *protoListener) Accept() (net.Conn, error) {
 	c, err := l.Listener.Accept()
 	if err != nil {
