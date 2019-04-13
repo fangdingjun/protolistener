@@ -1,4 +1,4 @@
-module github.com/fangdingjun/proto_listener
+module github.com/fangdingjun/protolistener
 
 go 1.13
 
