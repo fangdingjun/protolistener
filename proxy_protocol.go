@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"net"
 
-	"github.com/fangdingjun/go-log"
+	log "github.com/fangdingjun/go-log/v5"
 	proxyproto "github.com/pires/go-proxyproto"
 )
 
