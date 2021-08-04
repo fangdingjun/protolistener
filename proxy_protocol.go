@@ -69,7 +69,5 @@ func (c *protoConn) RemoteAddr() net.Addr {
 	if c.proxy == nil {
 		return c.Conn.RemoteAddr()
 	}
-	return &net.TCPAddr{
-		IP:   c.proxy.SourceAddress,
-		Port: int(c.proxy.SourcePort)}
+	return c.proxy.SourceAddr
 }
